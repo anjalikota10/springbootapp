@@ -1,0 +1,24 @@
+package com.example.myFirstProject;
+
+import org.springframework.web.bind.annotation.GetMapping;
+import org.springframework.web.bind.annotation.RestController;
+
+import java.util.ArrayList;
+import java.util.List;
+
+@RestController
+public class MyClass {
+    @GetMapping("abc")
+    public String sayhello()
+    {
+        return "hello";
+    }
+
+    @GetMapping("getdata")
+    public List<String> data(){
+        List<String> l=new ArrayList<String>();
+        l.add("abc");
+        l.add("pqr");
+        return l;
+    }
+}
